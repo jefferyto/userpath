@@ -52,6 +52,7 @@ def get_parent_process_name():
                 pass
 
         ppid = os.getppid()
+        print(ppid)
         process_name = subprocess.check_output(['ps', '-o', 'args=', str(ppid)]).decode('utf-8')
         return process_name.strip().lstrip("-")
     except Exception:

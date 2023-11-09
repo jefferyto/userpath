@@ -21,7 +21,7 @@ class Sh(Shell):
     @classmethod
     def show_path_commands(cls):
         # TODO: Find out what file influences non-login shells. The issue may simply be our Docker setup.
-        return [['sh', '-i', '-l', '-c', 'echo $PATH']]
+        return [['sh', '-i', '-c', 'echo $PATH'], ['sh', '-i', '-l', '-c', 'echo $PATH']]
 
 
 class Bash(Shell):
